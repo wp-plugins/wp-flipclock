@@ -1,10 +1,10 @@
-=== WP Flipclock ===
+﻿=== WP Flipclock ===
 Contributors: rhyswynne
 Donate link: http://winwar.co.uk/plugins/wp-flipclock/#donate
 Tags: flipclock, jquery, clocks, timers, countups, countdown
 Requires at least: 3.8.1
-Tested up to: 4.0
-Stable tag: 1.3
+Tested up to: 4.2.1
+Stable tag: 1.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -27,7 +27,16 @@ To use the plugin in your site, all you need to add to the page is the `[flipclo
 * hours - Hours : Minutes : Seconds
 * minutes - Minutes : Seconds
 
+* **lang** - Changes the language of the labels (days,hours,minutes,seconds). Supported languages: English, Russian, Spanish, French, German.
+* **timezone** - Sets timezone for date. Now it shows the correct time before the event. The time zones have unique names in the form "Area/Location", e.g. "America/New_York".
+* **seconds** - Hides|shows seconds in face-mode "days". 
+
+*1 - shows seconds
+*0 - hide seconds
+
 This plugin uses the [Flipclock.js](http://www.flipclockjs.com) library from [ObjectiveHTML](https://www.objectivehtml.com/).
+
+Further support and examples are on the [WP Flipclock Documentation](http://winwar.co.uk/documentation/wp-flipclock/) page.
 
 = About Winwar Media =
 This plugin is made by [**Winwar Media**](http://winwar.co.uk/), a WordPress Development and Training Agency in Manchester, UK.
@@ -49,6 +58,22 @@ We offer support in two places:-
 This project is now on github, [you can view the repository here](https://github.com/rhyswynne/wp-flipclock). There are other versions, but this is the one I've put up, so where all the developmental will be tracked.
 
 == Changelog ==
+= 1.5.1 =
+* Fixed a small bug that "countdown='false'" ends with a countdown. Allows people to specify no countdown and then still work.
+
+= 1.5 =
+* Now doesn't display negative time if the countdown has passed,.
+* Fixed a bug where the clock was out dependant on timezones (thanks [gleave75](https://github.com/gleave75))
+
+= 1.4 =
+* Now allows two different clocks on the same page (if given different names).
+* Added the "lang" Shortcode attribute to choose the languages.
+* Added the "timezone" attribute to set the timezone for the date.
+* Added the "seconds" attribute to hide/show seconds attribute which shows/hides the seconds.
+* Upgraded to flipclock.js version 0.5.5.
+
+A big thank you to Den Kalinin for a lot of the changes in this update.
+
 = 1.3 =
 * Rolled back to previous version of flipclock.js, as it caused issues. Will look at when I have time (patches welcome!)
 
